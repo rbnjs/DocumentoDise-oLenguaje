@@ -1,1 +1,110 @@
-Aqui esta el documento de diseño.
+# Lenguaje Programacion Guava
+
+Guava es un lenguaje imperativo de tipos fuertes. Este tiene booleanos, enteros, flotantes, caracteres y cadenas de estos.
+
+## Declaracion de variables
+
+En Guava las variables se declaran de la siguiente manera:
+
+    integer var :: a , b ,c ;
+    boolean var :: d , e;
+    real var :: f ,g ;
+    character var :: h;
+    string var :: i;
+
+## Asignacion de variables
+
+Para poder asignar valores a las variables se utiliza ´:=´
+
+    a := 1;
+    d := true;
+    f := 2.3;
+    h := 'b';
+    i := "hola";
+    // Creo que el pasaje por valor y por referencia deberia ser lo mismo.
+
+## Comentarios
+
+Para escribir comentarios se usa ´//´
+
+     // Esto es un comentario.
+
+## Expresiones numericas
+
+Las expresiones numericas soportadas por el lenguaje segun su presedencia son:
+
+    /, * //Division y Multiplicacion
+    +, - //Suma y  Resta
+
+## Expresiones booleanas
+
+Las expresiones booleanas de Guava son, sin ningun orden de presedencia (luego ver):
+
+    >=
+    <=
+    =
+    !=
+
+## Iteracion Acotada
+
+Estoy pensando en esto
+
+## Iteracion indeterminada
+
+Una iteracion en Guava se puede realizar mediante la palabra reservada ´while (expr booleana) do´, esto es:
+
+    while ( a < 100) do {
+        a := a + 10;
+    }
+
+    // Todavia no se si queramos esto. 
+    do {
+        a := a + 10;
+    } while ( a < 100)
+
+## Estructuras
+
+Estoy pensando en esto
+
+    type persona{
+        var integer :: ci;
+        var string :: nombre;
+        var character :: tipoSangre;
+        var real :: dinero;
+    } // Cool? Uncool?
+
+    var persona :: p;
+    p.ci := 20513513;
+    p.nombre := "Ruben";
+    p.dinero := 0.0;
+    p.tipoSangre := 'B';
+
+## Uniones
+
+Esta vaina es jodida, todavia no tengo idea.
+
+## Selectores
+
+    if ( a < 100) then {
+      a := a + 10;
+    }
+
+    if ( a < 100) then {
+        a := a * 100;
+    } else {
+        a := a + 10;
+    }
+
+## Arreglos
+
+    integer array :: z; 
+    z := ( 100 , 20, 33); // Esto si me gusta los parentesis son geniales.
+    a := z(2); // a es 20
+
+## Entrada / Salida
+
+Se tienen las funciones ´print´ y ´read´ para la entrada y salida.
+
+****
+
+## Ejemplos
