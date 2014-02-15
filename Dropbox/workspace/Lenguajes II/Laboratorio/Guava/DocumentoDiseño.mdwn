@@ -1,0 +1,147 @@
+# Lenguaje Programacion Guava
+
+Guava es un lenguaje imperativo de tipos fuertes. Este tiene booleanos, enteros, flotantes, caracteres y cadenas de estos.
+
+## Declaracion de variables
+
+En Guava las variables se declaran de la siguiente manera:
+
+    integer var  a , b ,c ;
+    boolean var  d , e;
+    real var  f ,g ;
+    character var  h;
+    string var  i;
+
+## Asignacion de variables
+
+Para poder asignar valores a las variables se utiliza `:=`
+
+    a := 1;
+    d := true;
+    f := 2.3;
+    h := 'b';
+    i := "hola";
+    // Creo que el pasaje por valor y por referencia deberia ser lo mismo.
+
+## Comentarios
+
+Para escribir comentarios se usa `//`
+
+     // Esto es un comentario.
+
+Si queremos tener comentarios mediante bloques usamos `/* */`
+
+    /**
+     * Esto es un comentario por bloque
+     */
+
+## Expresiones numericas
+
+Las expresiones numericas soportadas por el lenguaje segun su presedencia son:
+
+    - // Menos unario
+    ** // Exponenciacion
+    /, *, div, mod //Division (entera y real), Multiplicacion y resto
+    +, - //Suma y  Resta
+    ++ , -- // Operador sumar 1 y resta 1
+    
+Estas asocian por la derecha.
+
+## Expresiones booleanas
+
+Las expresiones booleanas de Guava son, sin ningun orden de presedencia (luego ver):
+
+    >=
+    <=
+    =
+    !=
+    <=>
+    and
+    or
+    not
+
+## Iteracion Acotada
+
+Las iteraciones acotadas en Guava se realizan colocando `for ( variable a iterar; condicion de parada; cambio de variable a iterar) { }`:
+
+    for (integer var i; i <= 100; i++){
+      print("hola!");
+    }
+
+## Iteracion indeterminada
+
+Una iteracion en Guava se puede realizar mediante la palabra reservada `while (expr booleana) do`, esto es:
+
+    while ( a < 100) do {
+        a := a + 10;
+    }
+
+Para permitir que el bloque se ejecute al menos una vez usamos `do { } while (expr booleana)`
+
+    do {
+        a := a + 10;
+    } while ( a < 100)
+
+## Salida de una iteracion o bloque de iteracion
+
+Para poder "romper" una iteracion tenemos la palabra reservada `break`, por ejemplo:
+
+    while (true) do {
+      if (a = 12){
+        break;
+      }
+      a++;
+    }
+
+Para "saltar" una iteracion usamos `continue`, ejemplo:
+
+    // Me falta un ejemplo
+
+## Estructuras
+
+Estoy pensando en esto
+
+    type persona{
+        var integer  ci;
+        var string  nombre;
+        var character  tipoSangre;
+        var real  dinero;
+    } // Cool? Uncool?
+
+    var persona  p;
+    p.ci := 20513513;
+    p.nombre := "Ruben";
+    p.dinero := 0.0;
+    p.tipoSangre := 'B';
+
+## Uniones
+
+Esta vaina es jodida, todavia no tengo idea.
+
+## Selectores
+
+    if ( a < 100) then {
+      a := a + 10;
+    }
+
+    if ( a < 100) then {
+        a := a * 100;
+    } else if ( a >= 100) then {
+        a := 0;
+    } else {
+        a := a + 10;
+    }
+
+## Arreglos
+
+    integer array[3]  z; 
+    z := [ 100 , 20, 33]; 
+    a := z[2]; // a es 33
+
+## Entrada / Salida
+
+Se tienen las funciones `print` y `read` para la entrada y salida. (Revisar si se puede realizar por etiqueta)
+
+****
+
+## Ejemplos
