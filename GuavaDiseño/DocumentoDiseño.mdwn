@@ -155,8 +155,17 @@ Para poder tener reservar memoria usamos la palabra reservada `new`:
 
 ## Funciones
 
-    function integer alCuadrado(integer a){
+Se utiliza la palabra reservada function para tener una funcion.
+
+    integer function alCuadrado(integer a){
         return a*a;
+    }
+
+Es importante destacar que una funcion que no retorna nada es de tipo void, por ejemplo:
+
+    void function hola(string a){
+        print("hola");
+        print(a);
     }
 
 ## Entrada / Salida
