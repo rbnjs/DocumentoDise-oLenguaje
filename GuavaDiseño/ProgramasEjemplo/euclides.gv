@@ -1,0 +1,17 @@
+/**
+ * Implementacion de algoritmo de euclides en Guava.
+ */
+integer a;
+integer b;
+print("a: ");
+read a; print('\n');
+print("b: ")
+read b; print('\n');
+
+while (b != 0){
+    // Estoy probando los comentarios
+    integer t := b;
+    b := a mod b
+    a := t
+}
+print(a);
