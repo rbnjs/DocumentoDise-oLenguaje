@@ -17,13 +17,41 @@ Algunas consideraciones a tomar en cuenta en la definición del lenguaje Guava:
   línea?]
 
 - Un programa en Guava tendrá una función main al estilo java o será estilo
-  python y ejecuta secuencialmente sin importar si haya main o no?
+  python y ejecuta secuencialmente sin importar si haya main o no? Que
+  ventajas de diseño tiene utilizar una función main? Tener un main implica
+  que lo demás sean funciones definidas para el comportamiento principal del
+  programa.
 
 - Cómo será el alcance de las variables? Habrá bloques anidados? Una variable
-  en un bloque interno con el nomrbe de una variable de un bloque más externo
-  la sobreescribe en el bloque en el que se definió?
+  en un bloque interno con el nombre de una variable de un bloque más externo
+  la sobreescribe en el bloque en el que se definió, mismo razonamiento para
+  variables locales con globales?
 
 - De tener variables globales cuáles serán las restricciones de éstas? Ej:
   Podrá existir una función con el nombre de un variable global?
 
-- 
+- Los arreglos serán manejados como apuntadores?
+
+- La comparación de arreglos cómo será? por valor o por referencia (comparando
+  valor de los apuntadores)?
+
+- Los Strings serán tratados como arreglos de caracteres? Teniendo en cuenta
+  esto, se aplican entonces las mismas propiedades de los arreglos?
+
+- Se permitirá sobrecarga de funciones: funciones que retornen diferentes tipos
+  de datos pero posean el mismo nombre?
+
+- Para acceder a los atributos de un tipo creado se utilizará el operador '.' o
+  '->'?
+ 
+- Tendremos un valor 'null'?
+
+- Las expresiones booleanas serán evaluadas por corto circuito? (Sólo se
+  evalúa el segundo operando si y sólo si el primer operando no es suficiente
+  para determinar el valor de la expresión)
+
+- Existirá combinación de operadores y operaciones de diferentes tipos?
+  Ejemplo:
+
+  -> while (a+b == c)
+  -> if ((a = 7*b) == x)
