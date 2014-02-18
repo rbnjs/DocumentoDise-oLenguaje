@@ -1,56 +1,57 @@
 Algunas consideraciones a tomar en cuenta en la definición del lenguaje Guava:
 
 - Cómo será la inicialización de estructuras de datos (reserva de espacio en
-  memoria)? Esto es, por ejemplo, String array[20] s = new String array?
+  memoria)? Esto es, por ejemplo, String array[20] s = new String array? -> agregada palabra reservada new
 
 - Identificadores: El lenguaje sera case-sensitive? De qué tamaño podrán ser
   los identificadores y que caracteres se podrán utilizar en éstos? [Maik dice:
   Los identificadores deberían de ser lo suficientemente largos como para que
   posean todas las letras del alfabeto, el underscore y todos los números, no
-  me gustaría que tengan caracteres especiales tipo $%!@#]
+  me gustaría que tengan caracteres especiales tipo $%!@#] -> Agregado underscore. Es case sensitive no estamos en DOS. 
 
-- Cuál será el máximo valor representable por un integer y un float?
+- Cuál será el máximo valor representable por un integer y un float? -> el de mips
 
 - Falta especificar los String y caracteres. [Maik dice: Los String deberían
   estar entre comillas dobles y los caracteres entre comillas simples. Los
   String pueden contener comillas simples. Los String podrán tener salto de
-  línea?]
+  línea?] -> listo
 
 - Un programa en Guava tendrá una función main al estilo java o será estilo
   python y ejecuta secuencialmente sin importar si haya main o no? Que
   ventajas de diseño tiene utilizar una función main? Tener un main implica
   que lo demás sean funciones definidas para el comportamiento principal del
-  programa.
+  programa. -> ya agregue la palabra reservada main
 
 - Cómo será el alcance de las variables? Habrá bloques anidados? Una variable
   en un bloque interno con el nombre de una variable de un bloque más externo
   la sobreescribe en el bloque en el que se definió, mismo razonamiento para
-  variables locales con globales?
+  variables locales con globales? -> estatico obligado , si, si.
 
 - De tener variables globales cuáles serán las restricciones de éstas? Ej:
-  Podrá existir una función con el nombre de un variable global?
+  Podrá existir una función con el nombre de un variable global? -> pudiesemos poner una palabra reservada constant y no le veo el rollo a que una funcion
+                                                                    tenga el mismo nombre que una constante.
 
-- Los arreglos serán manejados como apuntadores?
+- Los arreglos serán manejados como apuntadores? -> No. Como arreglos creo que mejor, ¿no?
 
 - La comparación de arreglos cómo será? por valor o por referencia (comparando
-  valor de los apuntadores)?
+  valor de los apuntadores)? -> ¿vamos a poder comparar arreglos?
 
 - Los Strings serán tratados como arreglos de caracteres? Teniendo en cuenta
-  esto, se aplican entonces las mismas propiedades de los arreglos?
+  esto, se aplican entonces las mismas propiedades de los arreglos? 
 
 - Se permitirá sobrecarga de funciones: funciones que retornen diferentes tipos
-  de datos pero posean el mismo nombre?
+  de datos pero posean el mismo nombre? -> no. Eso es mas orientado a objetos XD 
 
 - Para acceder a los atributos de un tipo creado se utilizará el operador '.' o
-  '->'?
+  '->'? -> Hay que pensar en eso. Creo que es preferible siempre usar .
  
-- Tendremos un valor 'null'?
+- Tendremos un valor 'null'? -> Si. El lenguaje debe tener apuntadores. Creo que es necesario un nuevo tipo de variable pointer.
 
 - Las expresiones booleanas serán evaluadas por corto circuito? (Sólo se
   evalúa el segundo operando si y sólo si el primer operando no es suficiente
-  para determinar el valor de la expresión)
+  para determinar el valor de la expresión) -> Si, eso me gusta.
 
-- Existirá combinación de operadores y operaciones de diferentes tipos?
+- Existirá combinación de operadores y operaciones de diferentes tipos? -> No le veo problema.
   Ejemplo:
 
   -> while (a+b == c)
