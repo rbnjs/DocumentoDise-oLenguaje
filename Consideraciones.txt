@@ -1,0 +1,29 @@
+Algunas consideraciones a tomar en cuenta en la definición del lenguaje Guava:
+
+- Cómo será la inicialización de estructuras de datos (reserva de espacio en
+  memoria)? Esto es, por ejemplo, String array[20] s = new String array?
+
+- Identificadores: El lenguaje sera case-sensitive? De qué tamaño podrán ser
+  los identificadores y que caracteres se podrán utilizar en éstos? [Maik dice:
+  Los identificadores deberían de ser lo suficientemente largos como para que
+  posean todas las letras del alfabeto, el underscore y todos los números, no
+  me gustaría que tengan caracteres especiales tipo $%!@#]
+
+- Cuál será el máximo valor representable por un integer y un float?
+
+- Falta especificar los String y caracteres. [Maik dice: Los String deberían
+  estar entre comillas dobles y los caracteres entre comillas simples. Los
+  String pueden contener comillas simples. Los String podrán tener salto de
+  línea?]
+
+- Un programa en Guava tendrá una función main al estilo java o será estilo
+  python y ejecuta secuencialmente sin importar si haya main o no?
+
+- Cómo será el alcance de las variables? Habrá bloques anidados? Una variable
+  en un bloque interno con el nomrbe de una variable de un bloque más externo
+  la sobreescribe en el bloque en el que se definió?
+
+- De tener variables globales cuáles serán las restricciones de éstas? Ej:
+  Podrá existir una función con el nombre de un variable global?
+
+- 
