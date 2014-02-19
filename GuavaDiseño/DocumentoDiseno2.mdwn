@@ -4,14 +4,111 @@
 
 Guava es un lenguaje imperativo fuertemente tipado, con sintáxis similar a la
 del lenguaje C o Java. Además de ofrecer tipos de datos primitivos:
-enteros, booleanos, flotantes, caracteres y cadenas de caracteres, Guava
+enteros, flotantes, booleanos, caracteres y cadenas de caracteres, Guava
 proporciona tipos compuestos de datos similares a los de C: estructuras 
 y uniones. El lenguaje también ofrece funciones implementadas y definidas 
 por el programador. Lo que diferencia a Guava de los demás lenguajes es 
 *[Colocar aquí los puntos característicos de Guava (plus con los arreglos)].*
 
+##Gramática
+
+*[Especificar la gramática del lenguaje en esta sección]*
+
 ##Estructura de un programa
 
 Un programa en Guava se estructura en un conjunto de definiciones de
-funciones y/o estructuras, declaraciones de variables (en este caso,
-consideradas globales) y un procedimiento principal *main*.
+funciones, procedimientos, estructuras, declaraciones de variables (en este 
+caso, consideradas globales) y un procedimiento principal *main*. *[Se debe
+especificar que no existe orden en los 'bloques de definicion' de la
+estructura del lenguaje]*
+
+Cada bloque de código dentro de un programa estará constituido a su vez por
+una serie de instrucciones separadas por el secuenciador **;** menos la
+última instrucción del bloque.
+
+##Elementos del lenguaje
+
+###Identificadores
+
+Los identificadores de variables son cadenas de caracteres que incluyen las
+letras que van desde la **a** a la **z** (mayúsculas y minúsculas incluidas)
+sin incluir la letra ñ, los números del **0** al **9** y el símbolo **_**. 
+Los identificadores no pueden iniciar con un número y son sensibles a 
+mayúsculas, teniendo entonces que **gua** es un identificador diferente a 
+**Gua** y éste a su vez a **gUA**.
+
+###Variables
+
+Una variable es un valor que puede ser alterado durante la ejecución de un
+programa en Guava. Las variables son nombradas a partir de un identificador
+y se clasifican en:
+
+* **Variables definidas por valor**: Son variables cuyo valor es guardado de
+forma estática en la memoria reservada para la ejecución del programa, una
+vez instanciada sólo podrá ser cambiado su valor a través de ella misma.
+Para declarar una variable definida por valor se especifica:
+
+     <tipo_dato> <identificador>
+
+* **Variables definidas por referencia**: Son variables cuyo valor es
+guardado en una dirección de memoria que puede ser accedida por más de una
+instancia de variable, es decir, pueden existir varias instancias que
+apunten a una misma dirección de memoria y por ende, posean el mismo valor.
+Modificar el valor de una variable definida por referencia se traduce en
+modificar el valor de todas las instancias que apunten también a su dirección
+de memoria. Para declarar una variable de este tipo se especifica:
+
+     <tipo_dato> var <identificador>
+
+Siendo `var` una palabra reservada del lenguaje.
+
+###Tipos de datos
+
+Guava dispone de los siguientes tipos de datos primitivos:
+
+* `integer`  : Números enteros con signo representables en 32 bits.
+* `real`     : Números en punto flotante con signo representables en 32 bits.
+* `boolean`  : Booleanos con los valores constantes `true` y `false`.
+* `character`: Representa un caracter único. Incluye las letras de la **a** a
+la **z**, los números del **0** al **9** y caracteres especiales.
+* `string`   : Representa una cadenas de caracteres. Incluye una combinación
+de las letras de la **a** a la **z**, los números del **0** al **9** y
+caracteres especiales.
+
+Además el lenguaje ofrece la creación de los tipos compuestos:
+
+* `record` : Define un conjunto de variables agrupadas por un nombre en un 
+bloque de memoria. Las variables que conforman la estructura pueden ser
+accedidas por un apuntador.
+* `union`  : Define un conjunto de variables agrupadas por un nombre en un
+bloque de memoria, pero a diferencia de `record` cada una de las variables
+del bloque comparten la misma dirección de memoria. Las variables de la
+unión pueden ser accedidas por un apuntador.
+
+Los nombres de cada tipo de datos son palabras reservadas del lenguaje, por
+ende, no pueden ser utilizadas como identificadores de variables.
+
+###Arreglos
+
+El lenguaje dispone de estructuras de datos de tipo arreglo. Los arreglos
+son homogéneos y ordenados linealmente por un número entero o índice.
+
+**La siguiente parte debe ser revisada y consultada:**
+
+Los arreglos en Guava son manejados estáticamente, al declarar una
+estructura de datos de este tipo se debe especificar el tamaño de la
+siguiente manera:
+
+    <tipo_dato> array[N] <identificador>
+
+Siendo `N` el tamaño del arreglo.
+
+**fin de revisión y consulta**
+
+####Operaciones asociadas a los Arreglos: *[sujeto a cambios]*
+
+Aquí entonces se debe de especificar todas las cosas finas que podemos hacer
+con los arreglos en Guava para que se diferencie de los demás lenguajes de
+programación, :).
+
+###Funciones
