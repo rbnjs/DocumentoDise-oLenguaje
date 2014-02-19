@@ -1,0 +1,17 @@
+#Lenguajes de Programación Guava - Version 1
+
+##Definición del Lenguaje
+
+Guava es un lenguaje imperativo fuertemente tipado, con sintáxis similar a la
+del lenguaje C o Java. Además de ofrecer tipos de datos primitivos:
+enteros, booleanos, flotantes, caracteres y cadenas de caracteres, Guava
+proporciona tipos compuestos de datos similares a los de C: estructuras 
+y uniones. El lenguaje también ofrece funciones implementadas y definidas 
+por el programador. Lo que diferencia a Guava de los demás lenguajes es 
+*[Colocar aquí los puntos característicos de Guava (plus con los arreglos)].*
+
+##Estructura de un programa
+
+Un programa en Guava se estructura en un conjunto de definiciones de
+funciones y/o estructuras, declaraciones de variables (en este caso,
+consideradas globales) y un procedimiento principal *main*.
