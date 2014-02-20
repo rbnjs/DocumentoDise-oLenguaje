@@ -7,12 +7,55 @@ del lenguaje C o Java. Además de ofrecer tipos de datos primitivos:
 enteros, flotantes, booleanos, caracteres y cadenas de caracteres, Guava
 proporciona tipos compuestos de datos similares a los de C: estructuras 
 y uniones. El lenguaje también ofrece funciones implementadas y definidas 
-por el programador. Lo que diferencia a Guava de los demás lenguajes es 
+por el programador. Como se explico anteriormente 
+Guava tiene similitudes con lenguajes como C/C++, Java,
+Go o Rust por lo que si se viene con un trasfondo de estos lenguajes se estara
+comodo, sin embargo este tiene ciertas diferencias importantes como por ejemplo una asignación
+distinta, arreglos dentro del lenguaje (no apuntadores), operadores especiales para 
+facilidad de programacion y palabras reservadas expresivas.
 *[Colocar aquí los puntos característicos de Guava (plus con los arreglos)].*
 
 ##Gramática
 
 *[Especificar la gramática del lenguaje en esta sección]*
+
+    EXP -> EXPBIN
+        |  EXPUN
+        |  VALOR
+        |  VAR
+        |  (EXP)
+
+    EXPBIN -> EXP and EXP // Expresiones booleanas binarias.
+           |  EXP or EXP
+           |  EXP <=> EXP
+           |  EXP > EXP
+           |  EXP < EXP
+           |  EXP >= EXP
+           |  EXP <= EXP
+           |  EXP = EXP
+           |  EXP != EXP
+           |  EXP + EXP // Expresiones numericas binarias
+           |  EXP - EXP 
+           |  EXP * EXP 
+           |  EXP / EXP 
+           |  EXP div EXP 
+           |  EXP mod EXP 
+           |  EXP ** EXP 
+
+    EXPUN -> not EXP 
+          |  - EXP
+          |  EXP ++
+          |  EXP --
+
+    VALOR -> true
+          |  false
+          |  STRING
+          |  CHAR
+          |  INT
+          |  REAL
+          
+    
+
 
 ##Estructura de un programa
 
