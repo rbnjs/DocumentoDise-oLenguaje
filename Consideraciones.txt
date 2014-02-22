@@ -74,3 +74,17 @@ primero que el x que es parámetro?
 - Las funciones que no retornen ningún valor, igual llevarán la palabra
 reservada 'return'? [Maik dice: Creo que sería bueno que se mantenga la palabra
 return para evitar agregar complejidad a la gramática].
+
+- Dado que se usará la palabra reservada 'declare' para las declaraciones, las
+variables globales también deberán ser declarada con la palabra reservada 
+'declare'?
+
+- FALTA DEFINIR COMO SE REPRESENTAN LOS TIPOS DE DATOS EN EL LENGUAJE
+
+- Los character también podrán estar entre comillas dobles.
+
+- Si se definirá la función map para los arreglos debemos definir entonces las
+funciones de orden superior.
+
+- Si los arreglos no se implementarán como apuntadores, cómo se pasarán como
+parámetros formales de una función? Se pasan indicando el tamaño?
