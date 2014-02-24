@@ -19,6 +19,8 @@ facilidad de programacion y palabras reservadas expresivas.
 
 *[Especificar la gramática del lenguaje en esta sección]*
 
+    
+
     EXP -> EXPBIN
         |  EXPUN
         |  VALOR
