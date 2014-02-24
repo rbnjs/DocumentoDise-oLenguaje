@@ -56,3 +56,35 @@ Algunas consideraciones a tomar en cuenta en la definición del lenguaje Guava:
 
   -> while (a+b == c)
   -> if ((a = 7*b) == x)
+
+==============================================================================
+
+Nuevas consideraciones (Maik el 21/02/2014):
+
+- Las variables locales de las funciones podran sobreescribir el valor de los
+parametros formales de la funcion? Es decir:
+
+void mi_funcion(int x) {
+  declare String x;
+}
+
+Aquí el x declarado en el cuerpo de la funcion será tomado en consideración
+primero que el x que es parámetro?
+
+- Las funciones que no retornen ningún valor, igual llevarán la palabra
+reservada 'return'? [Maik dice: Creo que sería bueno que se mantenga la palabra
+return para evitar agregar complejidad a la gramática].
+
+- Dado que se usará la palabra reservada 'declare' para las declaraciones, las
+variables globales también deberán ser declarada con la palabra reservada 
+'declare'?
+
+- FALTA DEFINIR COMO SE REPRESENTAN LOS TIPOS DE DATOS EN EL LENGUAJE
+
+- Los character también podrán estar entre comillas dobles.
+
+- Si se definirá la función map para los arreglos debemos definir entonces las
+funciones de orden superior.
+
+- Si los arreglos no se implementarán como apuntadores, cómo se pasarán como
+parámetros formales de una función? Se pasan indicando el tamaño?
