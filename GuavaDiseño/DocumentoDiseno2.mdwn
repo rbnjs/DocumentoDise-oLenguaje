@@ -155,7 +155,8 @@ Siendo `N` el tamaño del arreglo.
 
 Aquí entonces se debe de especificar todas las cosas finas que podemos hacer
 con los arreglos en Guava para que se diferencie de los demás lenguajes de
-programación, :).
+programación, :). *[o también redirigir a la sección de "operaciones con
+arreglos"]*
 
 ###Funciones
 
@@ -187,3 +188,49 @@ de las variables locales a la función.
 * Las funciones en Guava pueden ser recursivas.
 
 ###Expresiones
+
+En Guava, una expresión es cualquier enunciado que pueda ser evaluado y
+devuelve un valor.
+
+####Operaciones con Enteros:
+
+Guava soporta las siguientes operaciones aritméticas sobre el conjunto de los
+números enteros, con el siguiente orden de precedencia (de menor a mayor y
+operandos en una misma línea poseen igual precedencia):
+
+* `--, ++ :: integer -> integer` (decremento e incremento prefijo)
+* `+, - :: integer -> integer -> integer`
+* `*, div, mod :: integer -> integer -> integer`
+* `** :: integer -> integer -> integer`
+* `- :: integer -> integer` (menos unario)
+* `--, ++ :: integer -> integer` (decremento e incremento sufijo)
+
+Los operadores de suma, resta, multiplicación, cociente, módulo, decremento,
+e incremento sufijo asocian hacia la izquierda, mientras que los operadores
+de potenciación, decremento e incremento prefijo asocian hacia la derecha.
+
+La comparación de enteros se realizará con los siguientes operadores:
+
+* `>=, <=, >, <, =, != :: integer -> integer -> boolean`
+
+####Operaciones con Reales:
+
+Las operaciones correspondientes a la aritmética de reales son las siguientes
+(con orden de precedencia de menor a mayor):
+
+* `+, - :: real -> real -> real`
+* `*, \ :: real -> real -> real`
+* `- :: real -> real` (menos unario)
+
+Los operadores de suma, resta, multiplicación y división asocian hacia la
+izquierda.
+
+La comparación de reales se realizará con los operadores:
+
+* `>=, <=, >, <, =, != :: real -> real -> boolean`
+
+####Operaciones con Caracteres:
+
+Guava proporciona las siguientes operaciones sobre caracteres:
+
+* `toInt :: `
