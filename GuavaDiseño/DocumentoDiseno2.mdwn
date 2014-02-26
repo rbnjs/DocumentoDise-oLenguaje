@@ -22,15 +22,52 @@ palabras reservadas expresivas.
 
 *[Especificar la gramática del lenguaje en esta sección]*
 
-    
+   PROGRAM -> BLOQUEPRINCIPAL
 
-    EXP -> EXPBIN
+   BLOQUEPRINCIPAL -> BLOQUEDECLARE LFUNCIONES
+
+   BLOQUEDECLARE -> declare { LVARIABLES }
+                 | λ
+
+   LVARIABLES -> TIPO LVAR; LVARIABLES
+              |  TIPO LVAR;
+
+   LVAR -> VAR
+        |  VAR, LVAR
+
+   LFUNCIONES -> FUNCION LFUNCIONES
+              |  FUNCION 
+
+   FUNCION -> function TIPO ID (LPARAM){ BLOQUEDECLARE LISTAINSTRUCCIONES return VAR; }
+           |  function void ID (LPARAM){ BLOQUEDECLARE LISTAINSTRUCCIONES  } 
+
+   LPARAM ->  λ
+          |  TIPO VAR , LPARAM
+          |  TIPO VAR
+
+   LISTAINSTRUCCIONES -> INSTRUCCION ; LISTAINSTRUCCIONES
+                      | λ
+
+   INSTRUCCION -> ASIGNACION
+              |  LOOPFOR
+              |  LOOPWHILE
+              |  LLAMADAFUNCION
+              |  SELECTORIF
+
+   ASIGNACION -> VAR := EXP
+
+   LOOPFOR ->  for ( VAR ; EXP ; ASIGNACION ){ BLOQUEDECLARE LISTAINSTRUCCIONES }
+           |   for ( VAR ; EXP ; EXP ){ BLOQUEDECLARE LISTAINSTRUCCIONES }
+
+   LOOPWHILE
+
+   EXP -> EXPBIN
         |  EXPUN
         |  VALOR
         |  VAR
         |  (EXP)
 
-    EXPBIN -> EXP and EXP // Expresiones booleanas binarias.
+   EXPBIN -> EXP and EXP // Expresiones booleanas binarias.
            |  EXP or EXP
            |  EXP <=> EXP
            |  EXP > EXP
@@ -59,8 +96,6 @@ palabras reservadas expresivas.
           |  INT
           |  REAL
           
-    
-
 
 ##Estructura de un programa
 
