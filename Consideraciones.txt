@@ -88,3 +88,5 @@ funciones de orden superior.
 
 - Si los arreglos no se implementarán como apuntadores, cómo se pasarán como
 parámetros formales de una función? Se pasan indicando el tamaño?
+
+- Las variables tendran una inicialización por defecto?
