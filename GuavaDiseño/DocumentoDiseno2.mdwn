@@ -59,7 +59,11 @@ palabras reservadas expresivas.
    LOOPFOR ->  for ( VAR ; EXP ; ASIGNACION ){ BLOQUEDECLARE LISTAINSTRUCCIONES }
            |   for ( VAR ; EXP ; EXP ){ BLOQUEDECLARE LISTAINSTRUCCIONES }
 
-   LOOPWHILE
+   LOOPWHILE -> while ( EXP ) do { BLOQUEDECLARE LISTAINSTRUCCIONES }
+
+   SELECTORIF -> if ( EXP ) do { BLOQUEDECLARE LISTAINSTRUCCIONES } 
+
+   LLAMADAFUNCION -> ID ( LVAR )
 
    EXP -> EXPBIN
         |  EXPUN
@@ -67,7 +71,7 @@ palabras reservadas expresivas.
         |  VAR
         |  (EXP)
 
-   EXPBIN -> EXP and EXP // Expresiones booleanas binarias.
+   EXPBIN ->  EXP and EXP // Expresiones booleanas binarias.
            |  EXP or EXP
            |  EXP <=> EXP
            |  EXP > EXP
