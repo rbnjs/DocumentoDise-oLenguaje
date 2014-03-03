@@ -48,6 +48,9 @@ palabras reservadas expresivas.
    LISTAINSTRUCCIONES -> INSTRUCCION ; LISTAINSTRUCCIONES
                       | λ
 
+MOSCA: Con la regla anterior se esta permitiendo que los for, whiles e if (que
+terminan en '}') sean sucedidos de un ';' que no deberia ser.
+
    INSTRUCCION -> ASIGNACION
               |  LOOPFOR
               |  LOOPWHILE
@@ -58,6 +61,8 @@ palabras reservadas expresivas.
 
    LOOPFOR ->  for ( VAR ; EXP ; ASIGNACION ){ BLOQUEDECLARE LISTAINSTRUCCIONES }
            |   for ( VAR ; EXP ; EXP ){ BLOQUEDECLARE LISTAINSTRUCCIONES }
+
+Pondremos por fin la regla: for(VAR ; EXP ; EXP) ?
 
    LOOPWHILE
 
