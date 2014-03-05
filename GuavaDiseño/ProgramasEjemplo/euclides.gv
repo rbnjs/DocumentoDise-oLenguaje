@@ -1,17 +1,21 @@
 /**
  * Implementacion de algoritmo de euclides en Guava.
  */
-integer a;
-integer b;
-print("a: ");
-read a; print('\n');
-print("b: ")
-read b; print('\n');
+function void main(){
+  declare {
+    integer var a;
+    integer var b;
+    integer var t;
+  }
+  print("a: ");
+  read( a ); print('\n');
+  print("b: ");
+  read( b ); print('\n'); 
 
-while (b != 0){
-    // Estoy probando los comentarios
-    integer t := b;
-    b := a mod b
-    a := t
+  while (b != 0) do{
+      t := b;
+      b := a mod b;
+      a := t;
+  }
+  print(a);
 }
-print(a);
