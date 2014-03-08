@@ -1,0 +1,10 @@
+function void main(){
+    declare{
+        string var a;
+        real var b;
+        character var c;
+    }
+    a := "hola culados 
+    ;
+    c := 'hola cualdos';
+}
